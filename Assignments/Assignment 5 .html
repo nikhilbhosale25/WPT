@@ -1,0 +1,84 @@
+<html>
+
+<body>
+    <form>
+    <table border="1" width="30%" bgcolor="pink" cellspacing="0px">
+        <tbody>
+            <tr>
+                <td>
+                    <lable for="nm">Name</lable>
+                </td>
+                <td><input type="text" name="name" id="nm" required autofocus></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <lable for="EC">Employye Code</lable>
+                </td>
+                <td><input size="5" type="text" name="Code" id="EC"></td>
+            </tr>
+
+            <tr>
+                <td><label>Department</label></td>
+                <td><input type="radio" name="Dept" id="admin" value="admin" /><label for="admin">ADMIN</label>
+                <br>
+                <input type="radio" name="Dept" id="hr" value="hr" /><label for="hr">HR</label>
+                <br>
+                <input type="radio" name="Dept" id="tech" value="tech"/><label for="tech">TECHNICAL</label>
+                <br>
+                <input type="radio" name="Dept" id="acc" value="acc"/><label for="acc">ACCOUNT</label>
+            </td>
+            </tr>
+
+            <tr>
+                <td><label>Date of joining</label></td>
+                <td>
+                    <input type="text" size="1" name="date" id="doj"><label for="doj"> / </label>
+                    <input type="text" size="1" name="date" id="doj"><label for="doj"> / </label>
+                    <input type="text" size="1" name="date" id="doj"><label for="doj"></label>
+                    <br>
+                    <div>dd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yy</div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>ADDRESS</label></td>
+                <td><textarea name="address" id="add" rows="5" cols="30"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Training Program Attended</label></td>
+                <td><input type="checkbox" name="HTML" id="program" value="program"><label for="program" >HTML/DHTML</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="JAVA" id="J" value="J"><label for="J" >JAVA</label>
+                    <br>
+                    <input type="checkbox" name="clentserver" id="CS" value="CS"><label for="CS" >CLIENT/SERVER</label>
+                    <input type="checkbox" name=".net" id="c#" value="c#"><label for="c#" >.NET</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Training Program Need To Attend</label></td>
+                <td>
+                    <textarea name="program to attend" id="proid" rows="2" cols="10">JAVASCRIPT JSTRUTS</textarea>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Send Information At </label></td>
+                <td><a href="http://gmail.com" target="_blank">nihkilbhosale9900@gmail.com</a></td>
+            </tr>
+        </tbody>
+
+        
+    </table>
+    <!-- <label for="bt">SUBMIT</label> -->
+    <input type="submit" name="but" id="SUBMIT" value="SUBMIT">
+
+</form>
+</body>
+
+</html>
