@@ -1,0 +1,152 @@
+<html>
+    <head>
+
+        <style>
+            @keyframes animat{
+
+               from{
+                left:-100%;
+               }
+
+               to{
+                left:0%;
+               }
+               
+
+               /* 0%{
+                right: 100%;
+               }
+               50%{
+                right:80%;
+               } 
+               75%{
+                right:65%;
+               }
+               100%{
+                right: 50%;
+               } */
+
+
+            }
+
+            #field{
+
+                animation: animat;
+                animation-duration: 5s;
+                /* animation-delay: 10s; */
+                /* animation-direction: normal; */
+                position: relative; 
+            }
+        </style>
+
+        <style>
+            .myclass{
+                background-color: yellow;
+            }
+            .myc{
+                background-color: white;
+            }
+        </style>
+        <script src="./jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+
+
+                $('#nm').focus(function(){
+
+                    $('#nm').addClass("myclass").removeClass("myc")
+                })
+
+                $('#nm').blur(function(){
+
+                    $('#nm').addClass("myc").removeClass("myclass");
+                })
+
+                 $('#email').focus(function(){
+
+                    $('#email').addClass("myclass").removeClass("myc")
+                })
+
+                $('#email').blur(function(){
+
+                    $('#email').addClass("myc").removeClass("myclass");
+                })
+
+                 $('#sal').focus(function(){
+
+                    $('#sal').addClass("myclass").removeClass("myc")
+                })
+
+                $('#sal').blur(function(){
+
+                    $('#sal').addClass("myc").removeClass("myclass");
+                })
+                
+                function validatedata(nm,err)
+                {
+                    var r=$('#'+nm).val();
+                    if(r=="" || r.trim().length===0)
+                    {
+                        
+                        $('#'+err).html("Please Enter Some Valid Data");
+                        return false;
+                    }
+                    else{
+                    return true;
+                    }
+                }
+
+                function validateparams(nm)
+                {
+                   var name= $('#nm').val();
+
+                   var pat=/^an/gi;
+                    var a=name.search(pat);
+                   if(a!==0)
+                   {
+                    alert("Name should be start with AN");
+                    return false;
+                   }
+                   else{
+                    return true;
+                   }
+                }
+                $('#btn').click(function(){
+
+                   flag=validatedata('nm','errnm');
+                   flag1=validatedata('email','errmail');
+                   flag2=validatedata('sal','errsal');
+
+                   if(flag && flag1 && flag2)
+                   {
+                        flag4=validateparams('nm');
+                        if(flag4)
+                        {
+                            alert("correct name");
+                        }
+                   }
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <form align="center">
+        <fieldset style="margin-left: 500px; margin-right: 500px; border-width: 20px; border-color: rgb(27, 1, 1); margin-top: 250px;" id="field">
+            <h1>Employee Registration Form</h1>
+
+            <label for="nm">Name: </label><input type="text" name="nm" id="nm" >
+            <span id="errnm"></span><br><br>
+
+            <label for="nm">Email: </label><input type="text" name="email" id="email" >
+            <span id="errmail"></span><br><br>
+
+            <label for="nm">Salary: </label><input type="text" name="sal" id="sal" >
+            <span id="errsal"></span><br><br>
+            <button type="button" name="btn" id="btn" style="border-color: blue">Submit</button>
+            <button type="button" name="btn2" id="btn2" style="border-color: blue">Cancel</button>
+
+        </fieldset>
+        </form>
+    </body>
+</html>
