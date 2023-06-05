@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script>
+
+            function validatedata(num,errnum){
+
+                var num=document.getElementById(num).value;
+
+                if(num==="" || isNaN(num))
+                {
+                    document.getElementById(errnum).innerHTML="Enter numeric value";
+                    return false;
+                }
+                
+                document.getElementById(errnum).innerHTML="";
+                    return true;
+               
+
+                
+
+            }
+
+            function validatenum(){
+
+                var flag=validatedata("num1","errnum1");
+                var flag1=validatedata("num2","errnum2");
+                var flag2=validatedata("num3","errnum3");
+
+                if(flag && flag1 && flag2)
+                {
+                    maxnumber();
+                }
+
+            }
+
+            function maxnumber(){
+
+               var a= parseInt(document.getElementById("num1").value);
+               var b=parseInt(document.getElementById("num2").value);
+               var c=parseInt(document.getElementById("num3").value);
+
+               if(a>b && a>c)
+               {
+                var no=a;
+                document.getElementById("mydiv").innerHTML="Greates number= "+a;
+               }
+               
+               else if(b>a && b>c)
+               {
+                var no=b
+                document.getElementById("mydiv").innerHTML="Greates number= "+b;
+               }
+               else{
+                var no=c;
+                document.getElementById("mydiv").innerHTML="Greates number= "+c;
+               }
+
+               document.getElementById("btn").value=no;
+              
+            }
+
+        </script>
+    </head>
+    <body>
+
+       <label for="num1">Enter Number: </label> <input type="text" name="num1" id="num1" autofocus><span style="color: red;"> *</span>
+       <span id="errnum1"></span><br><br>
+       <label for="num2">Enter Number: </label> <input type="text" name="num2" id="num2"><span style="color: red;"> *</span>
+       <span id="errnum2"></span><br><br>
+       <label for="num3">Enter Number: </label> <input type="text" name="num3" id="num3"><span style="color: red;"> *</span>
+       <span id="errnum3"></span><br><br>
+        <label for="btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             Result: </label><input type="text" name="result" id="btn" disabled><br><br>
+
+        <button type="button" name="button" id="button" value="button" style="margin-left: 150px;" onclick="validatenum()">Answer</button>
+
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>
