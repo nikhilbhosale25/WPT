@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+        <script>
+
+            function Addnumbers(){
+
+                var number=parseInt(document.getElementById("digit").value);
+
+                var num="";
+                var ans=0;
+                while(number>0)
+                {
+                    num=number%10;
+                    ans+=num;
+                    number=number/10;
+
+                }
+
+                document.getElementById("mydiv").innerHTML=ans;
+
+            }
+        </script>
+    </head>
+    <body>
+
+        <label for="diigt">Enter number: </label><input type="text" name="digit" id="digit" >
+
+        <button type="button" name="but" id="but" value="but" onclick="Addnumbers()">Click Here</button>
+
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>
