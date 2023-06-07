@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+
+            function printmssg()
+            {
+                var msg=document.getElementById("mssg").value;
+                var count=parseInt(document.getElementById("val").value);
+
+                for(var i=0; i<count;i++)
+                {
+                    document.getElementById("mydiv").innerHTML+="Massege= "+msg;
+                }
+
+            }
+        </script>
+    </head>
+        <body>
+
+           <label for="mssg">Enter Message: </label> <input type="text" name="mssg" id="mssg"><br><br>
+
+           <label for="val" style="margin-left: 20px;">Enter value: </label> <input type="text" name="value" id="val" style="width: 50px;">
+
+           <button style="margin-left: 20px;" type="button" name="button" id="btn" value="Click Here" onclick="printmssg()">Click Here</button>
+
+           <div id="mydiv">
+
+           </div>
+        </body>
+</html>
