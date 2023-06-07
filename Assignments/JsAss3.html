@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+
+            function printnumbers()
+            {
+               var no= parseInt(document.getElementById("num").value);
+
+                for(var i=0; i<no; i++)
+                {
+                    if(i % 2 == 0)
+                    {
+                        document.getElementById("mydiv").innerHTML+=i;
+                    }
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+
+       <label for="num">Enter number: </label> <input type="text" name="num" id="num"><br><br>
+
+       <button type="button" name="button" id="btn" value="Click Here" onclick="printnumbers()">Click Here</button>
+
+       <div id="mydiv"></div>
+    </body>
+</html>
