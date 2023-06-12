@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide Image</title>
+  <script src="jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#showBtn').click(function() {
+        var radioButton = $('input[name="options"]:checked').val();
+        if (radioButton == 'Button 1') {
+          $('#image').attr('src', '../jquery2/button1.png');
+        } else if (radioButton == 'Button 2') {
+          $('#image').attr('src', '../jquery2/button2.png');
+        }
+        $('#image').toggle();
+        var buttonText = $(this).text();
+        $(this).text(buttonText == 'Show' ? 'Hide' : 'Show');
+        alert('Selected radio button: ' + radioButton);
+      });
+    });
+  </script>
+  <style>
+    #image {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <img id="image">
+    <br>
+    <label>
+      <input type="radio" name="options" value="Button 1"> Button 1
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="options" value="Button 2"> Button 2
+    </label>
+    <br>
+    <button type="button" id="showBtn">Show</button>
+  </form>
+</body>
+</html>
